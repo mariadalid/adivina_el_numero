@@ -116,3 +116,4 @@ return render_template('index.html',
                         iniciar_juego()
                         return render_template('index.html', puntos=session['puntos'], intentos=session['intentos'])
                         if __name__ == '__main__':
+                            app.run(debug=True)
