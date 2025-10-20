@@ -103,3 +103,9 @@ else:
 
 # En tu ruta Flask
 return render_template('index.html', mensaje=mensaje)
+
+#Mostrar el resultado al jugador
+return render_template('index.html',
+                       mensaje=f"{mensaje} {mensaje_distancia}",
+                       puntos=session['puntos'],
+                       intentos=session['intentos'])
