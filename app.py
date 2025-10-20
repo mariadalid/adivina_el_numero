@@ -109,3 +109,7 @@ return render_template('index.html',
                        mensaje=f"{mensaje} {mensaje_distancia}",
                        puntos=session['puntos'],
                        intentos=session['intentos'])
+
+                       #Reiniciar el juego y ejecutar el servidor
+                       @app.route('/reiniciar')
+                       def reiniciar():
