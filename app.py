@@ -115,3 +115,4 @@ return render_template('index.html',
                        def reiniciar():
                         iniciar_juego()
                         return render_template('index.html', puntos=session['puntos'], intentos=session['intentos'])
+                        if __name__ == '__main__':
