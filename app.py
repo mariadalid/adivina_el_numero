@@ -32,3 +32,4 @@ def adivinar():
         iniciar_juego()
 
 #Obtención de datos del jugador
+numero_secreto = session['numero']
