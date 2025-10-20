@@ -35,3 +35,5 @@ def adivinar():
 numero_secreto = session['numero']
 intento = int(request.form['numero'])
 session['intentos'] += 1
+mensaje = ''
+mensaje_distancia = ''
