@@ -34,3 +34,4 @@ def adivinar():
 #Obtención de datos del jugador
 numero_secreto = session['numero']
 intento = int(request.form['numero'])
+session['intentos'] += 1
