@@ -100,3 +100,6 @@ elif diff <= 39:
     distancia = 'Lejos.'
 else:
     distancia = 'Muy lejos.'
+
+# En tu ruta Flask
+return render_template('index.html', mensaje=mensaje)
