@@ -32,8 +32,27 @@ def adivinar():
         iniciar_juego()
 
 #Obtención de datos del jugador
-numero_secreto = session['numero']
-intento = int(request.form['numero'])
-session['intentos'] += 1
-mensaje = ''
-mensaje_distancia = ''
+    numero_secreto = session['numero']
+    intento = int(request.form['numero'])
+    session['intentos'] += 1
+    mensaje = ''
+    mensaje_distancia = ''
+
+
+#Obtención de datos del jugador
+    numero_secreto = session['numero']
+    intento = int(request.form['numero'])
+    session['intentos'] += 1
+
+    mensaje = ''
+    mensaje_distancia = ''
+
+# Verificar si acertó o no
+if intento == numero_secreto:
+    session['puntos'] += 100
+    mensaje = f'¡Correcto! El número era {numero_secreto}.'
+    session['numero'] = nuevo_numero()
+elif intento < numero_secreto:
+    mensaje = 'El número es mayor.'
+else:
+    mensaje = 'El número es menor.'
