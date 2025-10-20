@@ -90,3 +90,13 @@ else:
         distancia = 'Muy lejos.'
 
     mensaje = f'{pista} {distancia}'
+
+# Limpieza de condiciones para simplificar código
+if diff <= 9:
+    distancia = 'Muy cerca.'
+elif diff <= 19:
+    distancia = 'Cerca.'
+elif diff <= 39:
+    distancia = 'Lejos.'
+else:
+    distancia = 'Muy lejos.'
