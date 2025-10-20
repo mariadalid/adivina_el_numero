@@ -56,3 +56,14 @@ elif intento < numero_secreto:
     mensaje = 'El número es mayor.'
 else:
     mensaje = 'El número es menor.'
+
+    # Calcular qué tan cerca estuvo
+diff = abs(numero_secreto - intento)
+if diff <= 9:
+    mensaje_distancia = 'Muy cerca.'
+elif diff <= 19:
+    mensaje_distancia = 'Cerca.'
+elif diff <= 39:
+    mensaje_distancia = 'Lejos.'
+else:
+    mensaje_distancia = 'Muy lejos.'
