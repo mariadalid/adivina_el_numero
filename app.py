@@ -67,3 +67,26 @@ elif diff <= 39:
     mensaje_distancia = 'Lejos.'
 else:
     mensaje_distancia = 'Muy lejos.'
+
+# Unir mensaje principal y distancia
+if intento == numero_secreto:
+    session['puntos'] += 100
+    mensaje = f'¡Correcto! El número era {numero_secreto}.'
+    session['numero'] = nuevo_numero()
+else:
+    if intento < numero_secreto:
+        pista = 'El número es mayor.'
+    else:
+        pista = 'El número es menor.'
+
+    diff = abs(numero_secreto - intento)
+    if diff <= 9:
+        distancia = 'Muy cerca.'
+    elif diff <= 19:
+        distancia = 'Cerca.'
+    elif diff <= 39:
+        distancia = 'Lejos.'
+    else:
+        distancia = 'Muy lejos.'
+
+    mensaje = f'{pista} {distancia}'
