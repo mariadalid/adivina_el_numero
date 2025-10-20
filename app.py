@@ -30,3 +30,5 @@ def index():
 def adivinar():
     if 'numero' not in session:
         iniciar_juego()
+
+#Obtención de datos del jugador
